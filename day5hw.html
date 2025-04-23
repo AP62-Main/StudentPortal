@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Life Portal</title>
+  <style>
+    :root {
+      --bg-color: #92fc28;
+      --text-color: #111;
+      --header-bg: #ff00d0;
+      --nav-bg: #a230ff;
+      --card-bg: white;
+      --event-bg: #1662f9;
+      --event-text: white;
+    }
+
+    body.dark-mode {
+      --bg-color: #41819f;
+      --text-color: #f5f5f5;
+      --header-bg: #1e1e3f;
+      --nav-bg: #047857;
+      --card-bg: #2085bb;
+      --event-bg: #a8bb00;
+      --event-text: #fff7ed;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 1rem 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card h2 {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      margin: 0 -1.5rem 1rem -1.5rem;
+    }
+
+    .event-card {
+      background-color: var(--event-bg);
+      color: var(--event-text);
+      border: 2px solid var(--event-bg);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .event-card em {
+      display: block;
+      font-size: 0.9rem;
+      color: #fff6d8;
+      margin-top: 0.5rem;
+    }
+
+    .toggle-btn {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: var(--nav-bg);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Life Portal</h1>
+    <p>Your go-to spot for campus updates,  events, and community news.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Campus News</a>
+    <a href="#">Events</a>
+    <a href="#">Clubs</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Welcome, Students!</h2>
+      <p>Explore the latest happenings on campus, discover new clubs, and never miss an event. This portal is built for students, by students.</p>
+    </div>
+
+    <div class="card">
+      <h2>Latest Campus Buzz</h2>
+      <div class="event-card">
+        <strong>Spring Fest 2025 Announced!</strong>
+        <em>April 23, 2025 - by Campus Events Team</em>
+        <p>Get ready for live music, food trucks, games, and more! The annual Spring Fest will be held on May 5th at the central quad. Don’t miss out!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
